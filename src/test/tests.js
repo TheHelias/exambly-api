@@ -11,10 +11,10 @@ chai.use(assertArrays)
 chai.use(chaiHttp)
 
 const newUser = {
-  name: 'John Gabriel',
-  email: 'ssssss@hey.com',
+  name: 'John Gabrial',
+  email: 'ssssqqss@hey.com',
   password: 'TestingWithChai',
-  phone_no: '08043334343'
+  phone_no: '08053334343'
 }
 const user = new User(newUser)
 
