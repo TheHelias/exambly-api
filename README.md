@@ -2,4 +2,12 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/TheHelias/exambly-api/badge.svg?branch=master)](https://coveralls.io/github/TheHelias/exambly-api?branch=master)
 
+###Instructions
+
+Clone to local machine
+
+npm install
+
+npm run dev
+
 ## Exambly Api
