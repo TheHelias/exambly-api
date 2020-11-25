@@ -25,7 +25,7 @@ describe('/Create User', () => {
       .send(user)
       .end((err, res) => {
         res.should.have.status(409)
-        expect(res.body).to.deep.equal({ error: 'User with this email already exists!' })
+        expect(res.body).to.deep.equal({ error: 'User with this email already exists' })
         done()
       })
   })
