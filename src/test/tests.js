@@ -24,8 +24,8 @@ describe('/Create User', () => {
       .post('/api/user/create')
       .send(user)
       .end((err, res) => {
-        res.should.have.status(201)
-        expect(res.body).to.deep.equal({ message: 'Congrats! You have successfully signed up with Exambly!' })
+        res.should.have.status(409)
+        expect(res.body).to.deep.equal({ error: 'User with this email already exists!' })
         done()
       })
   })
