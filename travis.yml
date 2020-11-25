@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "14.15.0"
+
+script:  
+  - npm install
+  - npm run test
+
+
+
