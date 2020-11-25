@@ -1,0 +1,55 @@
+{
+  "name": "exambly",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "mocha --require @babel/register 'src/test/**/*.js' --recursive --timeout 30000 --exit",
+    "start": "npm run prod",
+    "dev": "cross-env NODE_ENV=development DEBUG=exambly:server npm run watch ./src/bin/www",
+    "prod": "npm run build && cross-env NODE_ENV=production node ./dist/bin/www",
+    "build": "npm run clean && babel ./src --out-dir dist",
+    "clean": "rimraf dist",
+    "watch": "nodemon --config ./nodemon.json --"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "~4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "~4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "morgan": "~1.10.0",
+    "npm-check-updates": "^4.1.2",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "chai-arrays": "^2.0.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3"
+  }
+}
