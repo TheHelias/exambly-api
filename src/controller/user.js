@@ -14,7 +14,7 @@ exports.createUser = [
   body('phone_no').isLength({ min: 9 }).withMessage('Please enter your phone number'),
   check('password')
     .isLength({ min: 8 })
-    .withMessage('must be at least 8 characters long'),
+    .withMessage('Password must be at least 8 characters long'),
   async (req, res) => {
     const errors = await validationResult(req)
     if (!errors.isEmpty()) {
